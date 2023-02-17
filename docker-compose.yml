@@ -11,6 +11,7 @@ services:
     #   - db
     build: .
     user: root
+    restart: unless-stopped
     command: >
       bash -c "bundle install &&
                bundle exec rake db:create &&
@@ -28,6 +29,7 @@ services:
       - "./:/demo_app"
   nginx:
     image: nginx:alpine
+    restart: unless-stopped
     links:
       - web:web
     ports:
