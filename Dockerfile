@@ -7,7 +7,7 @@ ENV RAKE_ENV='production'
 RUN mkdir ${APP_HOME}
 WORKDIR ${APP_HOME}
 
-RUN apt-get update -qq && apt-get install -y curl build-essential libpq-dev default-libmysqlclient-dev nano
+RUN apt-get update -qq && apt-get install -y curl build-essential libpq-dev libsqlite3-dev sqlite3 default-libmysqlclient-dev nano
 RUN curl -fsSL https://deb.nodesource.com/setup_16.x | bash - && \
     apt-get install -y nodejs
 RUN npm install -g yarn@1.22.19
