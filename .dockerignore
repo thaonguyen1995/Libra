@@ -1,0 +1,9 @@
+.git
+app/assets/javascripts/bundle.js
+config/leml.key
+public/assets/
+node_modules/
+vender/bundle/
+.bundle/
+log/*
+tmp/

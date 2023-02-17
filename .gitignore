@@ -38,3 +38,7 @@
 !/app/assets/builds/.keep
 
 /node_modules
+./public
+./docker/nginx/logs/*
+# Ignore application configuration
+/config/application.yml

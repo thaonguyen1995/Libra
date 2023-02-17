@@ -1,4 +1,4 @@
-FROM ruby:3.1.2
+FROM ruby:3.1.2-slim-bullseye
 
 ENV APP_HOME /demo_app
 ENV RAILS_ENV='production'
@@ -21,4 +21,5 @@ COPY package.json ${APP_HOME}/package.json
 RUN yarn install --check-files
 COPY . ${APP_HOME}
 
+EXPOSE 3000
 CMD ["bundle", "exec", "rails", "server", "-b", "0.0.0.0"]
