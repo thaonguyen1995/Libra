@@ -11,19 +11,19 @@ import { useState } from 'react';
 const Container = styled.div`
   width: 100%;
   vertical-align: middle;
-  font-family: "Noto Sans Japanese", "Roboto", Arial;
+  font-family: Arial, Helvetica, sans-serif;
   display: flex;
   color: #091F6C;
   min-height: 100vh;
   -webkit-align-items: center;
+  justify-content: center;
 
   #login-form {
     padding: 3rem;
     min-width: 450px;
-    width: 30%;
     margin: 0 0 0 48px;
     max-height: 800px;
-    max-width: 700px;
+    max-width: 500px;
     box-shadow: 0 1px 20px rgb(0 0 0 / 20%);
     border-radius: 10px;
     box-sizing: border-box;
@@ -42,8 +42,8 @@ const Container = styled.div`
   }
 `
 const ButtonLogin = styled.button`
-  height: 70px;
-  background: #1739a5;
+  height: 50px;
+  background: rgb(15 153 103);
   border: none;
   border-radius: 10px;
   color: #fff;
@@ -53,7 +53,7 @@ const ButtonLogin = styled.button`
 
   :hover {
     cursor: pointer;
-    background: #1EC18D;
+    background: rgb(7 120 84);
     box-shadow: 0 1px 20px rgb(0 0 0 / 20%);
   }
 `
@@ -62,7 +62,7 @@ const ButtonFaceBookLogin = styled.button`
   height: 40px;
   background: rgb(23 119 242);
   border: none;
-  border-radius: 5px;
+  border-radius: 10px;
   color: #fff;
   width: 100%;
   margin-bottom: 10px;
