@@ -53,6 +53,11 @@ gem 'devise'
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
+  gem "capistrano", "~> 3.17", require: false
+  gem "capistrano3-puma"
+  gem "capistrano-rails", require: false
+  gem "capistrano-bundler", require: false
+  gem 'capistrano-rbenv', '~> 2.1', '>= 2.1.4'
 end
 
 group :development do
