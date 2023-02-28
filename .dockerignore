@@ -7,3 +7,4 @@ vender/bundle/
 .bundle/
 log/*
 tmp/
+/config/application.yml

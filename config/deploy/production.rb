@@ -10,7 +10,7 @@ set :branch, 'react_rails7'
 set :stage, :production
 set :rails_env, :production
 set :deploy_to, "/home/deploy/libra"
-server "54.90.51.198", user: "deploy", roles: %w(web app db)
+server "54.90.51.198", user: "deploy", roles: %w(web app)
 
 
 

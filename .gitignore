@@ -29,8 +29,6 @@
 !/tmp/storage/
 !/tmp/storage/.keep
 
-/public/assets
-
 # Ignore master key for decrypting credentials and more.
 /config/master.key
 
@@ -38,7 +36,8 @@
 !/app/assets/builds/.keep
 
 /node_modules
-./public
+public/assets
+public/packs
 ./docker/nginx/logs/*
 # Ignore application configuration
 /config/application.yml
