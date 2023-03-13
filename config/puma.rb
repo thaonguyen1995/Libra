@@ -1,7 +1,7 @@
 threads_count = ENV.fetch("RAILS_MAX_THREADS") { 5 }
 threads threads_count, threads_count
 port        ENV.fetch("PORT") { 3000 }
-bind 'ssl://54.152.117.159?key=/etc/ssl/private/nginx-selfsigned.key&cert=/etc/ssl/certs/dhparam.pem'
+bind 'ssl://54.152.117.159?key=/etc/ssl/private/nginx-selfsigned.key&cert=/etc/ssl/certs/nginx-selfsigned.crt'
 app_dir = File.expand_path("../..", __FILE__)
 environment ENV.fetch("RAILS_ENV") { "development" }
 

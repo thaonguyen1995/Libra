@@ -5,10 +5,11 @@ set :user, 'deploy'
 set :application, "Libra"
 set :repo_url, "git@github.com:thaonguyen1995/Libra.git"
 set :pty, true
-set :linked_files, %w(config/database.yml config/application.yml)
+set :linked_files, %w(config/application.yml)
 set :linked_dirs, %w(log tmp/pids tmp/cache tmp/sockets public/system public/uploads)
 set :puma_pid, -> {"#{shared_path}/tmp/pids/puma.pid"}
 set :puma_preload_app, true
+set :deploy_via, :remote_cache
 
 namespace :deploy do
   desc "yarn install"
