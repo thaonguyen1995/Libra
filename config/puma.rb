@@ -3,7 +3,7 @@ threads threads_count, threads_count
 port        ENV.fetch("PORT") { 3000 }
 bind 'ssl://54.152.117.159?key=/etc/ssl/private/nginx-selfsigned.key&cert=/etc/ssl/certs/nginx-selfsigned.crt'
 app_dir = File.expand_path("../..", __FILE__)
-environment ENV.fetch("RAILS_ENV") { "development" }
+environment ENV.fetch("RAILS_ENV") { "production" }
 
 # bind "unix:///home/deploy/libra/shared/tmp/sockets/puma.sock"
 # pidfile '/home/deploy/libra/shared/tmp/pids/puma.pid'
