@@ -34,6 +34,15 @@ namespace :deploy do
     end
   end
   before :migrate, :create_database
+
+  task :restart do
+    on roles(:app), in: :sequence, wait: 5 do
+      within release_path do
+        execute "sudo systemctl restart puma"
+      end
+    end
+  end
+  after :publishing, :restart
 end
 
 before "deploy:assets:precompile", "deploy:yarn_install"
