@@ -8,7 +8,7 @@ module.exports = {
   mode: mode,
   devtool: "source-map",
   optimization: {
-    moduleIds: 'hashed',
+    moduleIds: 'deterministic',
   },
   entry: {
     application: "./app/javascript/src/App.tsx"

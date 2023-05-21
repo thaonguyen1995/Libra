@@ -4,11 +4,10 @@ class SessionsController < Devise::SessionsController
     if @user&.valid_password? params[:user][:password]
       sign_in @user
       session[:user_id] = @user.id
-      payload = { email: @user.email, id: @user.id }
-      token = JWT.encode payload, Rails.application.credentials.secret_key_base, 'HS256'
+      token = cookies[:_reactjs_rails7_session]
 
-      return render json: { status: 200, msg: 'Login success', token: }
+      return render json: { ok: true, msg: 'Login success', token: }, status: 200
     end
-    render json: { status: 401, msg: 'Unauthorized user' }
+    render json: { ok: false, msg: 'Unauthorized user' }, status: 401
   end
 end

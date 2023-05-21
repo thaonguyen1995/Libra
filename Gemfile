@@ -23,6 +23,7 @@ group :development, :test do
   gem 'rspec-rails', '~> 6.0.0'
   gem "database_cleaner"
   gem "shoulda-matchers"
+  gem 'pry', '~> 0.13.1'
   gem "simplecov", require: false
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
 end

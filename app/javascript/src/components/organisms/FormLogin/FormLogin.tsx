@@ -41,11 +41,15 @@ const FormLogin = () => {
           }
         })
     }).then((res) => res.json())
-      .then(({status, msg, token}) => {
-        setError(status !== 200);
+      .then((res) => {
+        const {ok, msg, token} = res;
+        console.log('aaa', res)
+        setError(!ok);
         setMsg(msg);
         window.localStorage.setItem('access_token', token);
-        if(status == 200) navigate("/");
+        console.log(ok)
+
+        if(ok) navigate("/");
       })
   }
 
