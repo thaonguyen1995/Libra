@@ -8,14 +8,14 @@ module.exports = {
   mode: mode,
   devtool: "source-map",
   optimization: {
-    moduleIds: 'hashed',
+    moduleIds: 'deterministic',
   },
   entry: {
     application: "./app/javascript/src/App.tsx"
   },
   output: {
-    filename: "[name].js",
-    sourceMapFilename: "[file].map",
+    filename: "application.js",
+    sourceMapFilename: "application.js.map",
     path: path.resolve(__dirname, "app/assets/builds"),
   },
   plugins: [
