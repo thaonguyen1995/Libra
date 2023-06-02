@@ -14,18 +14,18 @@ axios.defaults.headers.common = {
 
 axios.defaults.headers.post['X-CSRF-Token'] = csrf;
 
-const handleNormalResponse = (res) => {
-  return res;
-}
+// const handleNormalResponse = (res) => {
+//   return res;
+// }
 
-const handleErrorResponse = (res) => {
-  if (res.status == 401) {
-    const newResponse = axios.request(res.config);
+// const handleErrorResponse = (res) => {
+//   if (res.status == 401) {
+//     const newResponse = axios.request(res.config);
 
-    return newResponse;
-  }
-  return Promise.reject(res);;
-}
-axios.interceptors.response.use(handleNormalResponse, handleErrorResponse)
+//     return newResponse;
+//   }
+//   return Promise.reject(res);;
+// }
+// axios.interceptors.response.use(handleNormalResponse, handleErrorResponse)
 
 export default axios;

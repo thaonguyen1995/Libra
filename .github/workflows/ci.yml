@@ -35,12 +35,12 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: "16.17.1"
-          cache: yarn
-      - name: Cache node modules
-        uses: actions/cache@v3
-        with:
-          path: node_modules
-          key: cache-node_modules-${{hashFiles('yarn.lock')}}
+          # cache: yarn
+      # - name: Cache node modules
+      #   uses: actions/cache@v3
+      #   with:
+      #     path: node_modules
+      #     key: cache-node_modules-${{hashFiles('yarn.lock')}}
       - name: Install dependencies
         run: yarn install --frozen-lockfile
       - name: Run test
